@@ -1,11 +1,31 @@
 
 $(document).ready(function () {
 
+
+	// =====================Filter=============================================================================
+	$('.grid').isotope({
+		itemSelector: '.grid-item',
+		layoutMode: 'fitRows'
+	});
+
+	$('.grid-wrapper__button').on('click', function () {
+		$('.grid-wrapper__button').removeClass('active');
+		$(this).addClass('active');
+
+		var selector = $(this).attr('data-filter');
+
+		$('.grid').isotope({
+			filter: selector
+		});
+		return false
+	});
+
+
 	// ==========================Magnif Popup===================================================================================================
 	$('.popup-link, .popup-link-2').magnificPopup({});
 
 	// =======================================Slider=========================================================================================
-	$('.slider').slick({
+	$('.testimonials__slider-2').slick({
 		// dots: true,
 		// infinite: false,
 		// speed: 300,
@@ -16,8 +36,53 @@ $(document).ready(function () {
 		// fade: true,
 		// cssEase: 'linear',
 		// arrows: false,
-		// prevArrow: '<button type="button" class="slick-prev">Previous</button>',
-		// nextArrow: '<button type="button" class="slick-next">Next</button>',
+		asNavFor: '.testimonials__slider-1',
+		prevArrow: '<button type="button" class="slick-arrow slick-prev">Previous</button>',
+		nextArrow: '<button type="button" class="slick-arrow slick-next">Next</button>',
+		// responsive: [
+		// 	{
+		// 		breakpoint: 1024,
+		// 		settings: {
+		// 			slidesToShow: 3,
+		// 			slidesToScroll: 3,
+		// 			infinite: true,
+		// 			dots: true
+		// 		}
+		// 	},
+		// 	{
+		// 		breakpoint: 600,
+		// 		settings: {
+		// 			slidesToShow: 2,
+		// 			slidesToScroll: 2
+		// 		}
+		// 	},
+		// 	{
+		// 		breakpoint: 480,
+		// 		settings: {
+		// 			slidesToShow: 1,
+		// 			slidesToScroll: 1
+		// 		}
+		// 	}
+		// 	// You can unslick at a given breakpoint now by adding:
+		// 	// settings: "unslick"
+		// 	// instead of a settings object
+		// ]
+	});
+
+	$('.testimonials__slider-1').slick({
+		// dots: true,
+		// infinite: false,
+		speed: 1000,
+		// slidesToShow: 4,
+		// slidesToScroll: 4,
+		// autoplay: true,
+		// autoplaySpeed: 2000,
+		fade: true,
+		// cssEase: 'linear',
+		// arrows: false,
+		asNavFor: '.testimonials__slider-2',
+		// prevArrow: '<button type="button" class="slick-arrow slick-prev">Previous</button>',
+		// nextArrow: '<button type="button" class="slick-arrow slick-next">Next</button>',
 		// responsive: [
 		// 	{
 		// 		breakpoint: 1024,
@@ -147,15 +212,14 @@ $(document).ready(function () {
 	//====================IBG=============================================================================
 
 	function ibg() {
-		if (isIE()) {
-			let ibg = document.querySelectorAll("._ibg");
-			for (var i = 0; i < ibg.length; i++) {
-				if (ibg[i].querySelector('img') && ibg[i].querySelector('img').getAttribute('src') != null) {
-					ibg[i].style.backgroundImage = 'url(' + ibg[i].querySelector('img').getAttribute('src') + ')';
-				}
+
+		$.each($('.ibg'), function (index, val) {
+			if ($(this).find('img').length > 0) {
+				$(this).css('background-image', 'url("' + $(this).find('img').attr('src') + '")');
 			}
-		}
+		});
 	}
+
 	ibg();
 
 	//====================Dynamic adaptive=============================================================================
@@ -364,6 +428,5 @@ $(document).ready(function () {
 
 
 	// ===============================================================================================================================================
-	console.log(5);
 
 });

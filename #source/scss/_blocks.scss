@@ -1,7 +1,33 @@
-
-
+.readmore {
+    padding: 0px 25px 0px 0px;
+    position: relative;
+    display: inline-block;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.72px;
+    align-self: flex-start;
+    &:hover{
+        color: $red;
+        &:before{
+            color: $red;
+        }
+    }
+    &:before {
+        content: "\f178";
+        font-family: "icomoon";
+        position: absolute;
+        font-size: 15px;
+        color: #ffffff;
+        right: 0;
+        top: 3px;
+    }
+}
 // ==============================================================================================================================================
-
+.block-img {
+    height: 544px;
+    width: 470px;
+}
 // ==============================================================================================================================================
 
 // ==============================================================================================================================================
