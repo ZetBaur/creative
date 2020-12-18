@@ -52,6 +52,8 @@ $fontfamily: "Raleway";
     }
     .promo__header {
         .burger {
+            display: none;
+            cursor: pointer;
             svg {
                 fill: #fff;
             }

@@ -88,6 +88,9 @@
 // ================================================================
 
 @media (max-width: 767px) {
+    .promo .promo__header .burger{
+        display: block;
+    }
     .container {
         max-width: none;
         padding: 0px 15px;

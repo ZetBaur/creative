@@ -770,6 +770,10 @@ body {
   position: relative;
   z-index: 10;
 }
+.promo .promo__header .burger {
+  display: none;
+  cursor: pointer;
+}
 .promo .promo__header .burger svg {
   fill: #fff;
 }
@@ -1301,6 +1305,10 @@ body {
   }
 }
 @media (max-width: 767px) {
+  .promo .promo__header .burger {
+    display: block;
+  }
+
   .container {
     max-width: none;
     padding: 0px 15px;
