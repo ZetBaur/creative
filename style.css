@@ -1168,7 +1168,7 @@ img.mfp-img {
 }
 
 .promo {
-  background: url("/img/promo/2.jpg") 0 0 no-repeat;
+  background: url("img/promo/2.jpg") 0 0 no-repeat;
   background-size: cover;
   position: relative;
 }
@@ -1250,6 +1250,7 @@ img.mfp-img {
   line-height: 32px;
   letter-spacing: 1.28px;
 }
+
 .second {
   background-color: black;
 }
@@ -1258,8 +1259,8 @@ img.mfp-img {
   padding: 155px 0px 0px 0px;
 }
 .second__descr {
-  background: url("/img/second/bg.jpg") center center/cover no-repeat;
-  background-image: url("/img/second/bg.jpg");
+  background: url("img/second/bg.jpg") center center/cover no-repeat;
+  background-image: url("img/second/bg.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1318,13 +1319,13 @@ img.mfp-img {
   width: 40px;
 }
 .second-footer__title-1:before {
-  background-image: url("/img/second-footer/1.png");
+  background-image: url("img/second-footer/1.png");
 }
 .second-footer__title-2:before {
-  background-image: url("/img/second-footer/2.png");
+  background-image: url("img/second-footer/2.png");
 }
 .second-footer__title-3:before {
-  background-image: url("/img/second-footer/3.png");
+  background-image: url("img/second-footer/3.png");
 }
 .second-footer__text {
   margin: 0px 0px 32px 0px;
@@ -1335,6 +1336,7 @@ img.mfp-img {
   line-height: 30px;
   letter-spacing: 0.84px;
 }
+
 .grid-wrapper__nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1452,4 +1454,141 @@ img.mfp-img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.contact__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.contact__column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 80px;
+  width: 50%;
+}
+.contact__column-1 {
+  background-color: #2362bb;
+}
+.contact__column-item {
+  margin: 0px 0px 43px 0px;
+}
+.contact__title {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 26px;
+  margin: 0px 0px 19px 0px;
+}
+.contact__text {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 26px;
+  letter-spacing: 0.84px;
+}
+.contact__column-2 {
+  background-color: #131313;
+}
+.contact__column-2-title {
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 26px;
+  letter-spacing: 1.8px;
+  margin: 0px 0px 19px 0px;
+}
+
+.form__input {
+  height: 54px;
+  width: 100%;
+  background-color: #131313;
+  color: #525252;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 26px;
+  letter-spacing: 0.96px;
+  border-bottom: 1px solid grey;
+  padding: 0px 10px;
+}
+.form__input-textarea {
+  height: 114px;
+  margin: 0px 0px 37px 0px;
+  padding: 20px 0px 0px 10px;
+}
+.form__btn {
+  color: #525252;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.72px;
+  background-color: #131313;
+}
+.form__btn:before {
+  color: #525252;
+}
+
+.footer__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 155px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.footer__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.footer__text {
+  color: #565656;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 66px;
+  letter-spacing: 1.12px;
+  margin: 0px 0px 0px 17px;
+}
+.footer__socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.footer__icon {
+  margin: 0px 0px 0px 15px;
+  cursor: pointer;
+}
+.footer__icon:hover:before {
+  color: gray;
+}
+.footer__icon:before {
+  font-family: "icomoon";
+  font-size: 16px;
+  color: #ffffff;
+}
+.footer__facebook:before {
+  content: "";
+}
+.footer__twitter:before {
+  content: "";
+}
+.footer__instagram:before {
+  content: "";
+}
+.footer__youtube:before {
+  content: "";
+}
+.footer__be:before {
+  content: "";
+}
+.footer__pinterest:before {
+  content: "";
 }
