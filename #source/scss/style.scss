@@ -1,10 +1,8 @@
-// ШРИФТ ПО УМОЛЧАНИЮ=============================================================================================================================
 $fontfamily: "Raleway";
 // =============================================================================================================================================
 @import "_normalize.scss";
 @import "_null.scss";
 @import "_global.scss";
-@import "_popup.scss";
 @import "_slick.scss";
 @import "_fonts.scss";
 @import "_blocks.scss";
@@ -14,11 +12,30 @@ $fontfamily: "Raleway";
 .wrapper {
     background-color: rgba(0, 0, 0, 1.1);
 }
-
-// position: fixed
-// overflow: hidden
-//  top: 0
 // =============================================================================================================================================
+
+.pageup {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transform: rotate(-90deg);
+    background-color: #fff;
+
+    &:before {
+        content: "\f054";
+        font-family: "icomoon";
+        font-size: 25px;
+        color: #2362bb;
+    }
+}
+// =============================================================================================================================================
+
 .promo {
     background: url("img/promo/2.jpg") 0 0 no-repeat;
     background-size: cover;
@@ -34,6 +51,11 @@ $fontfamily: "Raleway";
         background-image: linear-gradient(to top, rgba(0, 0, 0, 0.99) 0%, rgba(3, 24, 51, 0.9) 100%);
     }
     .promo__header {
+        .burger {
+            svg {
+                fill: #fff;
+            }
+        }
         height: 150px;
         display: flex;
         justify-content: space-between;
@@ -41,10 +63,27 @@ $fontfamily: "Raleway";
         position: relative;
         z-index: 10;
 
-
-
         &-menu-list {
             display: flex;
+            transition: all 0.3s;
+            &.open {
+                transform: translateY(0);
+                .menu__close {
+                    display: block;
+                }
+            }
+        }
+        .menu__close {
+            display: none;
+            &:before {
+                content: "\f00d";
+                font-family: "icomoon";
+                position: absolute;
+                right: 50px;
+                top: 50px;
+                font-size: 20px;
+                color: #ffffff;
+            }
         }
 
         &-menu-item {
@@ -69,7 +108,7 @@ $fontfamily: "Raleway";
 
     &__body {
         position: relative;
-        z-index: 10;
+        // z-index: 10;
         padding: 200px 0px 40px 0px;
     }
 
@@ -78,10 +117,6 @@ $fontfamily: "Raleway";
     &__row {
         display: flex;
     }
-
-  
-
-  
 
     // .promo__column-descr
 
@@ -112,8 +147,6 @@ $fontfamily: "Raleway";
         line-height: 32px;
         letter-spacing: 1.28px;
     }
-
-  
 }
 
 // =============================================================================================================================================
@@ -146,8 +179,6 @@ $fontfamily: "Raleway";
         line-height: 30px;
         margin: 0px 0px 45px 0px;
     }
-
-   
 
     // .second__img
 
@@ -230,8 +261,6 @@ $fontfamily: "Raleway";
         line-height: 30px;
         letter-spacing: 0.84px;
     }
-
-   
 }
 
 // =============================================================================================================================================
@@ -304,8 +333,6 @@ $fontfamily: "Raleway";
         position: relative;
     }
 
- 
-
     &__column-1 {
         position: absolute;
         left: 84px;
@@ -322,10 +349,6 @@ $fontfamily: "Raleway";
         padding: 147px 77px 140px 603px;
     }
 
-   
-
-   
-
     // .testimonials__slider-item
 
     &__slider-item {
@@ -334,8 +357,6 @@ $fontfamily: "Raleway";
             height: 100%;
         }
     }
-
-   
 
     // .testimonials__slider-text
 
@@ -391,8 +412,6 @@ $fontfamily: "Raleway";
         display: flex;
         justify-content: space-between;
     }
-
-   
 }
 
 // =============================================================================================================================================
@@ -461,13 +480,9 @@ $fontfamily: "Raleway";
         letter-spacing: 1.8px;
         margin: 0px 0px 19px 0px;
     }
-
-   
 }
 
 .form {
-   
-
     // .form__input
 
     &__input {
@@ -518,8 +533,6 @@ $fontfamily: "Raleway";
     &__left {
         display: flex;
     }
-
-   
 
     // .footer__text
 

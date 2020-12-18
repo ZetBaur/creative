@@ -25,91 +25,17 @@ $(document).ready(function () {
 
 	// =======================================Slider=========================================================================================
 	$('.testimonials__slider-2').slick({
-		// dots: true,
-		// infinite: false,
 		speed: 500,
-		// slidesToShow: 4,
-		// slidesToScroll: 4,
-		// autoplay: true,
-		// autoplaySpeed: 2000,
-		// fade: true,
-		// cssEase: 'linear',
-		// arrows: false,
 		asNavFor: '.testimonials__slider-1',
 		prevArrow: '<button type="button" class="slick-arrow slick-prev">Previous</button>',
 		nextArrow: '<button type="button" class="slick-arrow slick-next">Next</button>',
-		// responsive: [
-		// 	{
-		// 		breakpoint: 1024,
-		// 		settings: {
-		// 			slidesToShow: 3,
-		// 			slidesToScroll: 3,
-		// 			infinite: true,
-		// 			dots: true
-		// 		}
-		// 	},
-		// 	{
-		// 		breakpoint: 600,
-		// 		settings: {
-		// 			slidesToShow: 2,
-		// 			slidesToScroll: 2
-		// 		}
-		// 	},
-		// 	{
-		// 		breakpoint: 480,
-		// 		settings: {
-		// 			slidesToShow: 1,
-		// 			slidesToScroll: 1
-		// 		}
-		// 	}
-		// 	// You can unslick at a given breakpoint now by adding:
-		// 	// settings: "unslick"
-		// 	// instead of a settings object
-		// ]
 	});
 
 	$('.testimonials__slider-1').slick({
-		// dots: true,
-		// infinite: false,
 		speed: 500,
-		// slidesToShow: 4,
-		// slidesToScroll: 4,
-		// autoplay: true,
-		// autoplaySpeed: 2000,
 		fade: true,
-		// cssEase: 'linear',
-		// arrows: false,
+		arrows: false,
 		asNavFor: '.testimonials__slider-2',
-		// prevArrow: '<button type="button" class="slick-arrow slick-prev">Previous</button>',
-		// nextArrow: '<button type="button" class="slick-arrow slick-next">Next</button>',
-		// responsive: [
-		// 	{
-		// 		breakpoint: 1024,
-		// 		settings: {
-		// 			slidesToShow: 3,
-		// 			slidesToScroll: 3,
-		// 			infinite: true,
-		// 			dots: true
-		// 		}
-		// 	},
-		// 	{
-		// 		breakpoint: 600,
-		// 		settings: {
-		// 			slidesToShow: 2,
-		// 			slidesToScroll: 2
-		// 		}
-		// 	},
-		// 	{
-		// 		breakpoint: 480,
-		// 		settings: {
-		// 			slidesToShow: 1,
-		// 			slidesToScroll: 1
-		// 		}
-		// 	}
-		// 	// You can unslick at a given breakpoint now by adding:
-		// 	// settings: "unslick"
-		// 	// instead of a settings object
-		// ]
 	});
 
 
@@ -117,35 +43,33 @@ $(document).ready(function () {
 	// =====================SCROLL TO TOP================================================================================
 
 	$(window).scroll(function () {
-		if ($(this).scrollTop() > 900) {
+		if ($(this).scrollTop() > 600) {
 			$('.pageup').fadeIn();
 		} else {
 			$('.pageup').fadeOut();
 
 		}
 	});
-	$("a[href^='#']").click(function () {
-		var _href = $(this).attr("href");
-		$("html, body").animate({ scrollTop: $(_href).offset().top + "px" });
-		return false;
-	});
+
+
 
 	// ================MENU and BURGER=============================================================================
-	$('.burger').on('click', function () {
-		$('.menu').toggleClass('open');
+	$('.burger, .burger svg path').on('click', function () {
+		$('.menu-list').addClass('open');
+
+	});
+	$('.menu__close').on('click', function () {
+		$('.menu-list').removeClass('open');
+
 	});
 
-	$('.menu-item').on('click', function () {
-		if ($('.menu').hasClass('open')) {
-			$('.menu').removeClass('open');
+	$('.menu-item, .menu-link').on('click', function () {
+		if ($('.menu-list').hasClass('open')) {
+			$('.menu-list').removeClass('open');
 		}
 	});
 
-	$('html, body').on('click', function (e) {
-		if ($('.menu').hasClass('open') && !$(e.target).is('.menu, .menu-item, .burger')) {
-			$('.menu').removeClass('open');
-		}
-	});
+
 
 
 	// =================Form================================================================================================================
@@ -619,12 +543,6 @@ $(document).ready(function () {
 		}
 	}
 
-
-
-
-	
-
-	
 
 	//====================IBG=============================================================================
 

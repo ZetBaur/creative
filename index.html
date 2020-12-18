@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<title>Главная</title>
 	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
@@ -13,8 +14,9 @@
 </head>
 <body>
 	<div class="wrapper">
+		<div id="up"></div>
 		<!-- =================================================== -->
-		<section class="promo">
+		<section class="promo" id="promo">
 			<div class="container">
 				<header class="promo__header">
 					<a href="#" class="promo__header-logo">
@@ -23,40 +25,47 @@
 					<nav class="promo__header-menu menu">
 						<ul class="promo__header-menu-list menu-list">
 							<li class="promo__header-menu-item menu-item">
-								<a href="#" class="promo__header-menu-link menu-link">
+								<a href="#promo" class="promo__header-menu-link menu-link">
 									welcome
 								</a>
 							</li>
 							<li class="promo__header-menu-item menu-item">
-								<a href="#" class="promo__header-menu-link menu-link">
+								<a href="#second" class="promo__header-menu-link menu-link">
 									about
 								</a>
 							</li>
 							<li class="promo__header-menu-item menu-item">
-								<a href="#" class="promo__header-menu-link menu-link">
+								<a href="#second-footer" class="promo__header-menu-link menu-link">
 									services
 								</a>
 							</li>
 							<li class="promo__header-menu-item menu-item">
-								<a href="#" class="promo__header-menu-link menu-link">
+								<a href="#grid-wrapper" class="promo__header-menu-link menu-link">
 									portfolio
 								</a>
 							</li>
 							<li class="promo__header-menu-item menu-item">
-								<a href="#" class="promo__header-menu-link menu-link">
+								<a href="#testimonials" class="promo__header-menu-link menu-link">
 									testimonial
 								</a>
 							</li>
 							<li class="promo__header-menu-item menu-item">
-								<a href="#" class="promo__header-menu-link menu-link">
+								<a href="#contact" class="promo__header-menu-link menu-link">
 									contact
 								</a>
 							</li>
+							<div class="menu__close"></div>
 						</ul>
 					</nav>
+					<div class="promo__header-burger burger">
+						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+							viewBox="0 0 32 32">
+							<title>menu</title>
+							<path d="M2 6h28v6h-28zM2 14h28v6h-28zM2 22h28v6h-28z"></path>
+						</svg>
+					</div>
 				</header>
 				<div class="promo__body">
-
 					<div class="promo__row">
 						<div class="promo__column promo__column-img block-img">
 							<img src="img/promo/1.jpg" alt="">
@@ -79,8 +88,8 @@
 				</div>
 			</div>
 		</section>
-		<!-- =================================================== -->
-		<section class="second">
+		<!-- ================================================================================================================ -->
+		<section class="second" id="second">
 			<div class="container">
 				<div class="second__body">
 					<div class="second__descr">
@@ -100,8 +109,8 @@
 				</div>
 			</div>
 		</section>
-		<!-- =================================================== -->
-		<section class="second-footer">
+		<!-- ========================================================================================================================= -->
+		<section class="second-footer" id="second-footer">
 			<div class="container">
 				<div class="second-footer__row">
 					<div class="second-footer__column">
@@ -143,8 +152,8 @@
 				</div>
 			</div>
 		</section>
-		<!-- =================================================== -->
-		<section class="grid-wrapper">
+		<!-- ====================================================================================================================================== -->
+		<section class="grid-wrapper" id="grid-wrapper">
 			<ul class="grid-wrapper__nav">
 				<li class="grid-wrapper__button" data-filter=".all">
 					All
@@ -230,8 +239,8 @@
 				</div>
 			</div>
 		</section>
-		<!-- =================================================== -->
-		<section class="testimonials">
+		<!-- ============================================================================================================================================ -->
+		<section class="testimonials" id="testimonials">
 			<div class="container">
 				<div class="testimonials__body">
 					<div class="testimonials__row">
@@ -283,15 +292,13 @@
 										David Ramon
 									</div>
 								</div>
-
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-
 		</section>
-		<!-- =================================================== -->
+		<!-- ================================================================================================================================================ -->
 		<section class="brands">
 			<div class="container">
 				<div class="brands__body">
@@ -316,8 +323,8 @@
 				</div>
 			</div>
 		</section>
-		<!-- =================================================== -->
-		<section class="contact">
+		<!-- ========================================================================================================================================= -->
+		<section class="contact" id="contact">
 			<div class="container">
 				<div class="contact__row">
 					<div class="contact__column contact__column-1">
@@ -330,7 +337,6 @@
 									username@mail.com
 								</a>
 							</address>
-
 						</div>
 						<div class="contact__column-item">
 							<div class="contact__title">
@@ -353,9 +359,7 @@
 								<br>
 								NY, USA
 							</div>
-
 						</div>
-
 					</div>
 					<div class="contact__column contact__column-2">
 						<div class="contact__column-2-title">
@@ -380,7 +384,7 @@
 				</div>
 			</div>
 		</section>
-		<!-- =================================================== -->
+		<!-- ================================================================================================================================================ -->
 		<footer class="footer">
 			<div class="container">
 				<div class="footer__body">
@@ -403,7 +407,8 @@
 				</div>
 			</div>
 		</footer>
-		<!-- =================================================== -->
+		<!-- ======================================================================================================================================= -->
+		<a href="#up" class="pageup"></a>
 	</div>
 
 
@@ -411,4 +416,5 @@
 <script src="js/main-plugins.js"></script>
 <script src="js/main-scripts.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,214 @@
+@media (max-width: 1200px) {
+    .container {
+        max-width: 970px;
+    }
+    .promo__body {
+        padding: 100px 0px 40px 0px;
+    }
+    .testimonials__column-2 {
+        padding: 50px 37px 115px 585px;
+    }
+    .brands__body {
+        padding: 140px 0px 80px 0px;
+    }
+    .second-footer__row {
+        padding: 65px 0px;
+    }
+}
+
+// ================================================================
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 750px;
+    }
+    .promo__row {
+        flex-wrap: wrap;
+    }
+    .promo__column {
+        width: 100%;
+        padding: 0;
+    }
+    .promo__column-img {
+        margin: 0px 0px 50px 0px;
+    }
+    .second__img {
+        position: static;
+    }
+    .second__body {
+        display: flex;
+        flex-direction: column;
+    }
+    .second__descr {
+        padding: 50px;
+    }
+    .second-footer__column {
+        margin: 0;
+        padding: 0px 20px;
+    }
+    .second-footer__row {
+        margin: 0px -20px;
+    }
+    .second-footer__title {
+        font-size: 20px;
+    }
+
+    .testimonials__column-1 {
+        width: 235px;
+        height: 272px;
+        left: 35px;
+    }
+    .testimonials__column-2 {
+        padding: 50px 37px 115px 303px;
+    }
+    .brands__icon {
+        width: 16.666%;
+        img {
+            width: 80%;
+        }
+    }
+    .contact__column-2,
+    .contact__column-1 {
+        padding: 30px;
+    }
+    .second__body {
+        padding: 0;
+    }
+    .brands__body {
+        padding: 40px 0px;
+    }
+    .contact__title {
+        margin: 0px 0px 5px 0px;
+    }
+    .contact__column-item {
+        margin: 0px 0px 20px 0px;
+    }
+}
+
+// ================================================================
+
+@media (max-width: 767px) {
+    .container {
+        max-width: none;
+        padding: 0px 15px;
+    }
+    .menu-list {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #2362bb;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 80px 0px;
+        overflow: auto;
+        transform: translateY(-120%);
+    }
+    .promo .promo__header-menu-item {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .promo .promo__header-menu-link {
+        padding: 20px 0px;
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+    .block-img {
+        width: 100%;
+        height: auto;
+        img {
+            width: 100%;
+        }
+    }
+    .promo__body {
+        padding: 0px 0px 30px 0px;
+    }
+    .promo__column-title {
+        font-size: 25px;
+        line-height: 1.5;
+        margin: 20px 0px;
+    }
+    .promo__column-img {
+        margin: 0;
+    }
+    .second__descr {
+        padding: 10px 10px 30px 10px;
+    }
+    .second-footer__row {
+        flex-wrap: wrap;
+    }
+    .second-footer__column {
+        width: 100%;
+        margin: 0px 0px 40px 0px;
+    }
+    .second-footer__text,
+    .second-footer__title {
+        margin: 0px 0px 10px 0px;
+    }
+    .grid-wrapper__nav {
+        flex-wrap: wrap;
+        height: auto;
+        margin: 0px 0px 50px 0px;
+    }
+    .grid-wrapper__button {
+        width: 100%;
+    }
+
+    .grid-wrapper__item-wrapper {
+        width: 100%;
+    }
+    .grid-wrapper__item {
+        width: 100%;
+    }
+    .testimonials__column-1 {
+        transform: translateY(0);
+        position: static;
+    }
+    .testimonials__row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .testimonials__column-2 {
+        padding: 10px;
+        width: 100%;
+    }
+    .testimonials__body {
+        padding: 0;
+    }
+    .testimonials .slick-prev {
+        bottom: 35px;
+        right: 70px;
+        z-index: 20;
+    }
+    .testimonials .slick-next {
+        bottom: 35px;
+        right: 20px;
+    }
+    .contact__row {
+        flex-wrap: wrap;
+    }
+    .contact__column {
+        width: 100%;
+    }
+    .footer__body {
+        flex-wrap: wrap;
+    }
+    .footer__left {
+        width: 100%;
+    }
+    .footer__text {
+        font-size: 10px;
+    }
+    .footer__socials {
+        justify-content: space-between;
+        width: 100%;
+    }
+    .second-footer__row {
+        margin: 0;
+    }
+}
